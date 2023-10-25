@@ -11,6 +11,8 @@ services:
       - LANG=de
       - META_INDEX_STATUS=all
       - THEME=Dark
+      - FAVICON_URL=https://www.geekparents.de/wp-content/uploads/2022/01/cropped-website-icon-180x180.png
+      - AVATAR_2X_URL=https://www.geekparents.de/wp-content/uploads/2022/01/website-icon.png
       - AVATAR_URL=https://www.geekparents.de/wp-content/uploads/2022/01/cropped-website-icon.png
       - AVATAR_ALT=Geekparents Podcast
       - NAME=Geekparents
