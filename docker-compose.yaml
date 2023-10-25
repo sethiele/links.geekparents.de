@@ -23,13 +23,18 @@ services:
       - MASTODON=https://podcasts.social/@geekparents
       - BLUESKY=https://bsky.app/profile/geekparents.de
       - WHATSAPP=https://whatsapp.com/channel/0029Va8Vwp40QeamLQtger0c
-      - BUTTON_ORDER=PODCAST,RSS,POCKETCASTS,SPOTIFY,BLUESKY,MASTODON,INSTAGRAM,X
-      - CUSTOM_BUTTON_TEXT=Podcast,RSS,Pocket Casts
-      - CUSTOM_BUTTON_URL=https://geekparents.de,https://www.geekparents.de/feed/mp3/,https://pca.st/flzijpo9
-      - CUSTOM_BUTTON_COLOR=#0085FF,#FF9800,#F44336
-      - CUSTOM_BUTTON_TEXT_COLOR=#ffffff,#ffffff,#ffffff
-      - CUSTOM_BUTTON_ALT_TEXT=Podcast,RSS Feed,Pocket Casts
-      - CUSTOM_BUTTON_NAME=PODCAST,RSS,POCKETCASTS
+      - CUSTOM_BUTTON_TEXT=Podcast,Pocket Casts
+      - CUSTOM_BUTTON_URL=https://geekparents.de
+      - CUSTOM_BUTTON_COLOR=#0085FF
+      - CUSTOM_BUTTON_TEXT_COLOR=#ffffff
+      - CUSTOM_BUTTON_ALT_TEXT=Podcast
+      - CUSTOM_BUTTON_NAME=PODCAST
+      - APPLE_PODCASTS=https://podcasts.apple.com/de/podcast/geekparents/id1487526700
+      - GOOGLE_PODCASTS=https://podcasts.google.com/feed/aHR0cHM6Ly9nZWVrcGFyZW50cy5kZS9mZWVkL21wNC8
+      - POCKET_CASTS=https://pca.st/flzijpo9
+      - OVERCAST=https://overcast.fm/itunes1487526700
+      - RSS=https://www.geekparents.de/feed/mp3/
+      - BUTTON_ORDER=PODCAST,RSS,POCKETCASTS,SPOTIFY,APPLE_PODCASTS,GOOGLE_PODCASTS,POCKET_CASTS,OVERCAST,BLUESKY,MASTODON,INSTAGRAM,WHATSAPP,TELEGRAM,X
     ports:
       - 8091:3000
     restart: unless-stopped
