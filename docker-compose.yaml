@@ -1,0 +1,37 @@
+---
+version: "3.0"
+services:
+  littlelink-server:
+    image: ghcr.io/techno-tim/littlelink-server:latest
+    container_name: gp_littlelink-server
+    environment:
+      - META_TITLE=Geekpartens Podcast Links
+      - META_DESCRIPTION=Geekparents Podcast im Internet
+      - META_AUTHOR=Geekparents Podcast
+      - LANG=de
+      - META_INDEX_STATUS=all
+      - THEME=Dark
+      - AVATAR_URL=https://www.geekparents.de/wp-content/uploads/2022/01/cropped-website-icon.png
+      - AVATAR_ALT=Geekparents Podcast
+      - NAME=Geekparents
+      - BIO=Geekparents ist ein Podcast von drei Berlinern die in der IT arbeiten und Kinder haben. Das ist eine tödliche Kombination und zeigt ein ganz eigenes Weltbild.
+      - FOOTER=Da war doch sicher was dabei.
+      - X=https://twitter.com/geekparents_de
+      - INSTAGRAM=https://www.instagram.com/geekparents_de/
+      - SPOTIFY=https://open.spotify.com/show/0eYOsIAx32ZMlkpz4gPLzJ?si=e11186d213ef48c1
+      - TELEGRAM=https://t.me/geekparents
+      - MASTODON=https://podcasts.social/@geekparents
+      - BLUESKY=https://bsky.app/profile/geekparents.de
+      - WHATSAPP=https://whatsapp.com/channel/0029Va8Vwp40QeamLQtger0c
+      - BUTTON_ORDER=PODCAST,RSS,POCKETCASTS,SPOTIFY,BLUESKY,MASTODON,INSTAGRAM,X
+      - CUSTOM_BUTTON_TEXT=Podcast,RSS,Pocket Casts
+      - CUSTOM_BUTTON_URL=https://geekparents.de,https://www.geekparents.de/feed/mp3/,https://pca.st/flzijpo9
+      - CUSTOM_BUTTON_COLOR=#0085FF,#FF9800,#F44336
+      - CUSTOM_BUTTON_TEXT_COLOR=#ffffff,#ffffff,#ffffff
+      - CUSTOM_BUTTON_ALT_TEXT=Podcast,RSS Feed,Pocket Casts
+      - CUSTOM_BUTTON_NAME=PODCAST,RSS,POCKETCASTS
+    ports:
+      - 8091:3000
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
